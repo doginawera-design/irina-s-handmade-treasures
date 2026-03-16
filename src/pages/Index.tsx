@@ -3,15 +3,7 @@ import { Button } from "@/components/ui/button";
 import { mockProducts } from "@/data/products";
 import { motion } from "framer-motion";
 import { useCart } from "@/contexts/CartContext";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
-  }),
-};
+import { fadeUp } from "@/lib/animations";
 
 const Index = () => {
   const featured = mockProducts.filter((p) => p.featured);
